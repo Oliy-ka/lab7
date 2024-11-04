@@ -1,0 +1,234 @@
+<!DOCTYPE html> 
+<html lang="uk"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>NEWLOOK</title> 
+    <style> 
+        body { 
+            background-color: #865f4b;  
+            font-family: Arial, sans-serif; 
+            color: #fbfbf8;  
+            margin: 20px; 
+            transition: background-color 0.3s ease;  
+        } 
+        header { 
+            background-color: #fbfbf8; 
+            padding: 10px 0; 
+            margin-bottom: 20px; 
+            text-align: center; 
+        } 
+        nav ul { 
+            list-style-type: none;  
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            display: flex;  
+            justify-content: center;  
+        } 
+        nav ul li { 
+            margin: 0 15px; 
+        } 
+        nav ul li a { 
+            color: #865f4b;  
+            text-decoration: none;  
+            font-size: 18px;  
+            padding: 10px 15px;  
+            transition: background-color 0.3s ease;  
+        } 
+        nav ul li a:hover { 
+            background-color: #fbfbf8;  
+            color: #865f4b;  
+        } 
+        h1, h2, h3 { 
+            text-align: center;  
+            color: #fbfbf8; 
+        } 
+        table { 
+            width: 100%; 
+            margin-bottom: 20px; 
+            border-collapse: collapse;  
+        } 
+        th, td { 
+            border: 2px solid #fbfbf8; 
+            padding: 10px; 
+            text-align: center;  
+        } 
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto 20px; 
+            transition: transform 0.3s ease;  
+        } 
+        iframe { 
+            width: 100%; 
+            height: 315px; 
+            display: block; 
+            margin: 0 auto; 
+        } 
+        form { 
+            background-color: #fbfbf8; 
+            padding: 20px; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+        } 
+        input, select, textarea { 
+            width: calc(100% - 22px);  
+            padding: 10px; 
+            margin: 10px 0; 
+            border: 1px solid #865f4b; 
+            border-radius: 5px; 
+            box-sizing: border-box;  
+        } 
+        input[type="submit"] { 
+            background-color: #865f4b; 
+            color: #fbfbf8; 
+            border: none; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        } 
+        input[type="submit"]:hover { 
+            background-color: #d1b39e; 
+        } 
+        label { 
+            color: #865f4b;  
+            font-weight: bold;  
+        } 
+        @media screen and (max-width: 768px) { 
+            nav ul { 
+                flex-direction: column;  
+            } 
+            iframe { 
+                height: 200px; 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <header> 
+        <nav> 
+            <ul> 
+                <li><a href="#">Головна</a></li> 
+                <li><a href="#">Жінкам</a></li> 
+                <li><a href="#">Чоловікам</a></li> 
+                <li><a href="#">Для дому</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+    
+    <h1>NEWLOOK</h1> 
+    <h3>Ласкаво просимо у світ речей!</h3> 
+
+    <h2>Перелік категорій</h2> 
+    <ul> 
+        <li>Жінкам</li> 
+        <li>Чоловікам</li> 
+        <li>Для дому</li> 
+    </ul> 
+
+    <h2>Категорії</h2> 
+    <table> 
+        <tr> 
+            <th>Жінкам</th> 
+            <th>Чоловікам</th> 
+            <th>Для дому</th> 
+        </tr> 
+        <tr> 
+            <td>Одяг</td> 
+            <td>Одяг</td> 
+            <td>Кухня</td> 
+        </tr> 
+        <tr> 
+            <td>Взуття</td> 
+            <td>Взуття</td> 
+            <td>Вітальня</td> 
+        </tr> 
+    </table> 
+
+    <h2>Фото наших образів!</h2> 
+    <img src="https://i.pinimg.com/564x/b0/28/a9/b028a9dfd649ebad168c02a3e657fa5d.jpg" alt="SUMMER24"> 
+
+    <h2>Відео колекції</h2> 
+    <iframe src="https://www.youtube.com/embed/Ej-sB7H-Qe8?si=DCrUXFCzRS7trzJj"  
+    title="YouTube video player"  
+    frameborder="0"  
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  
+    referrerpolicy="strict-origin-when-cross-origin"  
+    allowfullscreen> 
+    </iframe> 
+    
+    <h2>Опитування</h2> 
+    <form id="surveyForm" action="submit.php" method="POST">
+    <label>Ім'я:</label> 
+    <input type="text" name="name" required> 
+
+    <label>Email:</label> 
+    <input type="email" name="email" required> 
+
+    <label>Який ваш улюблений стиль одягу?</label> 
+    <select name="style" required> 
+        <option value="Casual">Casual</option> 
+        <option value="Denim">Denim</option> 
+        <option value="Streetstyle">Streetstyle</option> 
+    </select> 
+
+    <label>Скільки років ви є нашим клієнтом?</label> 
+    <input type="number" name="years" min="0" required> 
+
+    <label>Опишіть ваш досвід:</label> 
+    <textarea name="experience" required></textarea> 
+
+    <input type="submit" value="Надіслати"> 
+</form>
+
+    <p id="responseMessage" style="text-align: center; color: #fbfbf8;"></p>
+
+    <h2>Наші жарти</h2>
+    <p id="joke">Натисніть кнопку нижче, щоб завантажити жарт!</p>
+    <button onclick="loadJoke()">Завантажити жарт</button>
+
+    <script>
+        // Функція для завантаження жартів з текстового файлу
+        async function loadJoke() {
+            try {
+                const response = await fetch('jokes.txt');
+                const text = await response.text();
+                const jokes = text.split('\n').filter(joke => joke.trim() !== ''); // Розділити на рядки та видалити порожні рядки
+                const randomJoke = jokes[Math.floor(Math.random() * jokes.length)]; // Вибрати випадковий жарт
+                document.getElementById('joke').textContent = randomJoke; // Відобразити жарт
+            } catch (error) {
+                console.error('Помилка завантаження жартів:', error);
+            }
+        }
+        
+        
+        $(document).ready(function() {
+            $('#surveyForm').submit(function(event) {
+                event.preventDefault();
+        
+                const formData = $(this).serialize();
+        
+                $.ajax({
+                    type: 'POST',
+                    url: 'submit.php', // PHP файл для обробки анкети
+                    data: formData,
+                    success: function(response) {
+                        // Виводимо підтвердження
+                        $("#message").html("Дякуємо за ваш відгук, " + $('#name').val() + "!<br>Ваші відповіді збережені.");
+                        $("#surveyForm")[0].reset(); // Очищення форми
+                    },
+                    error: function() {
+                        $('#responseMessage').text('Сталася помилка при відправці анкети. Спробуйте ще раз.');
+                    }
+                });
+            });
+        });
+        
+        
+        
+    </script> 
+</body> 
+</html>
+
+
